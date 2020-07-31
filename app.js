@@ -1,12 +1,15 @@
-const express = require('express')
+var express = require('express')
+var cors = require('cors')
 const digestPayloadAsPlainText = require('./middleware')
 const PORT = '8080'
 
 let app = express()
 
-app.use(digestPayloadAsPlainText);
+app.use(cors())
+app.use(digestPayloadAsPlainText)
 
 app.post('/hello', (req,res) => {
+    res.header('Content-Type', 'text/plain')
     res.status(200).send(req.rawBody)
 })
 

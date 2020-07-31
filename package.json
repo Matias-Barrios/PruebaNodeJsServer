@@ -4,7 +4,7 @@
   "description": "A simple API in NodeJS",
   "main": "app.js",
   "scripts": {
-    "start" : "node app.js",
+    "start": "node app.js",
     "test": "NODE_ENV=test node_modules/.bin/mocha --timeout '10000' --exit"
   },
   "repository": {
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Matias-Barrios/PruebaNodeJsServer#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1"
   },
   "devDependencies": {
